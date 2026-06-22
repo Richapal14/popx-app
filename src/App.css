@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+
+:root {
+  --primary-purple: #6C2CF5;
+  --secondary-purple: #E2C3F6;
+  --bg-color: #F9F9FB;
+  --text-dark: #1D2226;
+  --text-grey: #6E7989;
+  --border-color: #D1D5DB;
+  --input-label-purple: #6C2CF5;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #E5E7EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+
+.mobile-container {
+  width: 100%;
+  max-width: 375px; 
+  height: 812px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.screen-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-grey);
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+
+::placeholder {
+  color: #c9c9c9;
+}
+
+
+.dashed-line {
+  height: 1px;
+  background-image: linear-gradient(to right, var(--border-color) 40%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+  width: calc(100% + 40px); 
+  margin-left: -20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
